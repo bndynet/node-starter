@@ -1,0 +1,39 @@
+{
+  "name": "node-starter",
+  "version": "1.0.0",
+  "description": "A starter project for nodejs",
+  "scripts": {
+    "start": "npm run build && npm run watch",
+    "build": "npm run build-ts && npm run tslint",
+    "serve": "node ./dist/index.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve\"",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "npm run build && test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bndynet/node-starter.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Bendy Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bndynet/node-starter/issues"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.7",
+    "@types/express": "^4.0.39",
+    "concurrently": "^3.5.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2"
+  }
+}
