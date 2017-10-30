@@ -10,7 +10,7 @@
 # Getting started
 - Clone the repository
 ```
-git clone --depth=1 https://github.com/Microsoft/TypeScript-Node-Starter.git <project_name>
+git clone  https://github.com/bndynet/node-start.git
 ```
 - Install dependencies
 ```
@@ -409,9 +409,3 @@ In that file you'll find two sections:
 | typescript                      | JavaScript compiler/type checker that boosts JavaScript productivity  |
 
 To install or update these dependencies you can use `npm install` or `npm update`.
-
-# Other
-Here is a section of miscellaneous tips. 
-
-# Hackathon Starter Project
-A majority of this quick start's content was inspired or adapted from Sahat's excellent [Hackathon Starter project](https://github.com/sahat/hackathon-starter).

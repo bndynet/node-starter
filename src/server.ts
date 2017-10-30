@@ -16,8 +16,10 @@ import * as mongoose from "mongoose";
 import * as passport from "passport";
 
 import expressValidator = require("express-validator");
+import { Logger } from "./lib/logger";
 
 const MongoStore = mongo(session);
+const appLogger = new Logger();
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -82,6 +84,7 @@ app.use(flash());
 app.use(lusca.xframe("SAMEORIGIN"));
 app.use(lusca.xssProtection(true));
 app.use((req, res, next) => {
+  appLogger.write({date: new Date(), url: req.url, method: req.method, client: req.ip});
   res.locals.user = req.user;
   next();
 });
