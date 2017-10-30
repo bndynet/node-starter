@@ -1,68 +1,60 @@
 {
     "rules": {
         "class-name": true,
-        "curly": true,
-        "eofline": false,
-        "forin": true,
-        "indent": false,
-        "label-position": true,
-        "max-line-length": [
+        "comment-format": [
             true,
-            150
+            "check-space"
         ],
-        "no-arg": true,
-        "no-bitwise": true,
-        "no-console": false,
-        "no-construct": true,
-        "no-constructor-vars": false,
-        "no-debugger": true,
-        "no-duplicate-variable": true,
-        "no-empty": true,
-        "no-eval": true,
-        "no-string-literal": true,
-        "no-switch-case-fall-through": true,
-        "no-trailing-whitespace": true,
-        "no-unused-expression": true,
-        "no-unused-variable": false,
-        "no-use-before-declare": true,
-        "no-var-requires": false,
+        "indent": [
+            true,
+            "spaces"
+        ],
         "one-line": [
             true,
             "check-open-brace",
-            "check-catch",
-            "check-else",
             "check-whitespace"
         ],
+        "no-var-keyword": true,
         "quotemark": [
             true,
-            "single"
+            "double",
+            "avoid-escape"
         ],
-        "semicolon": true,
-        "triple-equals": [
+        "semicolon": [
             true,
-            "allow-null-check"
-        ],
-        "typedef": [
-            true,
-            "callSignature",
-            "indexSignature",
-            "parameter",
-            "propertySignature",
-            "variableDeclarator",
-            "memberVariableDeclarator"
-        ],
-        "use-strict": false,
-        "variable-name": [
-            true,
-            "allow-leading-underscore"
+            "always",
+            "ignore-bound-class-methods"
         ],
         "whitespace": [
             true,
             "check-branch",
             "check-decl",
             "check-operator",
+            "check-module",
             "check-separator",
             "check-type"
-        ]
+        ],
+        "typedef-whitespace": [
+            true,
+            {
+                "call-signature": "nospace",
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            },
+            {
+                "call-signature": "onespace",
+                "index-signature": "onespace",
+                "parameter": "onespace",
+                "property-declaration": "onespace",
+                "variable-declaration": "onespace"
+            }
+        ],
+        "no-internal-module": true,
+        "no-trailing-whitespace": true,
+        "no-null-keyword": true,
+        "prefer-const": true,
+        "jsdoc-format": true
     }
 }
