@@ -1,6 +1,6 @@
 # TypeScript Node Starter
 
-[![Dependency Status](https://david-dm.org/Microsoft/TypeScript-Node-Starter.svg)](https://david-dm.org/Microsoft/TypeScript-Node-Starter) [![Build Status](https://travis-ci.org/Microsoft/TypeScript-Node-Starter.svg?branch=master)](https://travis-ci.org/Microsoft/TypeScript-Node-Starter) 
+[![Build Status](https://travis-ci.org/bndynet/node-starter.svg?branch=master)](https://travis-ci.org/bndynet/node-starter) 
 
 # Pre-reqs
 - Install [Node.js](https://nodejs.org/en/)
@@ -10,11 +10,10 @@
 # Getting started
 - Clone the repository
 ```
-git clone  https://github.com/bndynet/node-start.git
+git clone  https://github.com/bndynet/node-starter.git
 ```
 - Install dependencies
 ```
-cd <project_name>
 npm install
 ```
 - Start your mongoDB server (you'll probably want another command prompt)
