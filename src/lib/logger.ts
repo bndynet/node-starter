@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import * as fs from "fs-extra";
 import * as path from "path";
 
 export class Logger {
@@ -6,11 +6,7 @@ export class Logger {
     if (!this.rootDir) {
       this.rootDir = "./log";
     }
-
-    // ensure the folder existing
-    if (!fs.existsSync(this.rootDir)) {
-      fs.mkdirSync(this.rootDir);
-    }
+    fs.ensureDirSync(this.rootDir);
   }
 
   public write(logMsg: any): void {
@@ -21,19 +17,7 @@ export class Logger {
     // ensure the path existing
     logFile = path.join(this.rootDir, logFile);
     const logFolder = path.dirname(logFile);
-    const folders = logFolder.split("/");
-    let tmpPath = "";
-    for (const folderName of folders) {
-      if (tmpPath === "") {
-        tmpPath = folderName;
-      } else {
-        tmpPath = path.join(tmpPath, folderName);
-      }
-
-      if (!fs.existsSync(tmpPath)) {
-        fs.mkdirSync(tmpPath);
-      }
-    }
+    fs.ensureDirSync(logFolder);
 
     // convert the json object
     if (logMsg instanceof Object) {
