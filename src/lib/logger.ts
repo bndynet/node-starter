@@ -45,26 +45,12 @@ export class Logger {
 
       // write header for log
       if (!fs.existsSync(logFile)) {
-        fs.writeFile(logFile, header + "\r\n", {
-          "flag": "a",
-        }, (err) => {
-          console.error(logMsg);
-          if (err) {
-            throw err;
-          }
-        });
+        fs.writeFileSync(logFile, header + "\r\n", { "flag": "a" });
       }
     }
 
     // write msg to file
-    fs.writeFile(logFile, logMsg + "\r\n", {
-      "flag": "a",
-    }, (err) => {
-      console.error(logMsg);
-      if (err) {
-        throw err;
-      }
-    });
+    fs.writeFile(logFile, logMsg + "\r\n", { "flag": "a" });
   }
 
   public write2Folder(logFolder: string, logMsg: any): void {
